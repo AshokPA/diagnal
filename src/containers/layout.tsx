@@ -41,8 +41,7 @@ const Layout: React.FC = () => {
         searchContent(text);
     }
     const loadingCSS = {
-        height: "30px",
-        margin: "30px"
+        height: "20px",
     };
     const loadingText = {display: loading? 'block' : 'none'}
     return (

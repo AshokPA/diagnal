@@ -16,7 +16,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
         <div className="p-1 pb-6">
             <img className="w-full" src={"assets/" + content.posterImage} alt={content.name}  loading="lazy" onError={onError}/>
             <div className="pt-2">
-                <div className="text-xs truncate" >{content.name}</div>
+                <div className="text-xs text-gray-300 truncate" >{content.name}</div>
             </div>
         </div>
     )
