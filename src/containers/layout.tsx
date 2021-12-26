@@ -41,17 +41,19 @@ const Layout: React.FC = () => {
         searchContent(text);
     }
     const loadingCSS = {
-        height: "100px",
+        height: "30px",
         margin: "30px"
     };
     const loadingText = {display: loading? 'block' : 'none'}
     return (
-        <div className="container mx-auto px-4">
+        <div className="max-h-screen overflow-hidden">
             <Header pageTitle={pageTitle} searchText={searchText} doSearch={handleSearch}/>
-            <ContentList contents={filterdContents}/>
+            <div className="container max-h-[90vh] overflow-y-auto overflow-x-hidden no-scrollbar" >
+                <ContentList contents={filterdContents}/>
             <div ref={loadingRef} style={loadingCSS}>
                 <span style={loadingText}>Loading....</span>
             </div>
+            </div>           
         </div>
        
     )

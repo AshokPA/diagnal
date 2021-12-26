@@ -6,14 +6,11 @@ import Layout from './containers/layout';
 function App() {
 
   return (
-    <div className='bg-black text-white no-scrollbar'>
+    <div className='bg-black text-white min-h-screen'>
       <Provider store={store}>
           <Layout />
       </Provider>
     </div>
-    
-    
-
   );
 }
 

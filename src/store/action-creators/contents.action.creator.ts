@@ -5,9 +5,9 @@ import { ActionType } from "../action-types";
 
 export const searchContent = (text: string) => {
     return async(dispatch: Dispatch<Action>, getState: any) => {
-        const {searchText, contents} = getState().contents;
+        const {contents} = getState().contents;
         const filterdData = contents.filter((content: any) => {
-            return content.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
+            return content.name.toLowerCase().indexOf(text.toLowerCase()) !== -1
         });
         dispatch({
             type: ActionType.SEARCH_CONTENTS,
